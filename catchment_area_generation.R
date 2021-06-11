@@ -10,9 +10,8 @@ here::here() # make sure you are already in the folder where the data is
 # Data cleaning ----------------------------------------------------------------
 
 # Load raster and shapefile data 
-
 accessibility_raster <- raster::raster(here::here("data", "2015_friction_surface_v1.geotiff"))
-# The friction surface, which is available here:  http://www.map.ox.ac.uk/accessibility_to_cities/
+# The friction surface is available here:  http://www.map.ox.ac.uk/accessibility_to_cities/
 
 accessibility_raster
 
@@ -124,7 +123,7 @@ temp.raster <- accCost(T.GC, xy.matrix)
 writeRaster(temp.raster, output.filename) 
 
 # Run the r.cost algorithm in QGIS or GRASS GIS using this raster
-# as the unit cost layer  and the health facility points as the 'start points'
+# as the unit cost layer and the health facility points as the 'start points'
 # to create a raster layer of catchment areas which can then be vectorised
 
 # Plot the resulting raster
